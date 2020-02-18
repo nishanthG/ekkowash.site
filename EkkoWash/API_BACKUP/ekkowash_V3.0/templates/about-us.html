@@ -1,0 +1,282 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Activitar Template">
+    <meta name="keywords" content="Activitar, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ekko Wash | Car Washing Service</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section header-normal">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'img/logo.png' %}" alt="">
+                </a>
+            </div>
+            <div class="top-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-whatsapp"></i>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div class="container">
+                <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <ul>
+                            <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                            <!-- <li><a href="./about-us.html">About us</a></li> -->
+                            <!-- <li><a href="./schedule.html">Schedule</a></li> -->
+                            <li><a href="{% url 'about_page' %}">About Us</a></li>
+                            <li><a href="{% url 'gallery_page' %}">Gallery</a></li>
+                            <li><a href="{% url 'offers_page' %}">Why Us?</a>
+                                <ul class="dropdown">
+                                    <li><a href="{% url 'offers_page' %}">Our Offers</a></li>
+                                    <li><a href="{% url 'blog_page' %}"> Why Waterless Car Wash?</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'contact_us_page' %}">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg spad" data-setbg="{% static 'img/about.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>About Us</h2>
+                        <div class="breadcrumb-controls">
+                            <a href="#"><i class="fa fa-home"></i> Home</a>
+                            <span>About Us</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb End -->
+
+    <!-- Aboutus Section Begin -->
+    <section class="aboutus-section spad">
+        <div class="container">
+            <div class="aboutus-page-text">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 m-auto">
+                        <div class="section-title">
+                            <h2>Who we Are & What We Do</h2>
+                            <p>EKKO WASH is a EcoFriendly doorstep car cleaning services in Hyderabad.
+We understand the importance of your time and how frustrating and stressful a car wash at the service stations can be. But now, you can just relax because we are here to provide doorstep car wash in Hyderabad. Our philosophy is to provide the highest level of customer satisfaction by using quality products. We look forward to providing world class services at your doorstep at affordable prices.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <img src="img/about-us.jpg" alt=""> -->
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about-us">
+                            <h4>Our vision for the future</h4>
+                            <p>We are making an attempt to change the way India washes the cars. With our imported Steam Machine and Eco-Friendly products, we thrive to use minimal amount of water to wash a complete car. We are just a <b>simple, green</b> and <b>friendly</b> team of people, eager to use technology to help you.<br><br>We not only thrive to be the Best Car Washers in Hyderabad but also are driven to be Hygienic and Eco-Friendly and at a very reasonable price. We are truly focused on providing Superior Quality Service and deriving 100% Customer Satisfaction Level.<br><br>We always make sure to match the shine of your face with the shine on your car. We also aim to provide the best car interior cleaning in Hyderabad as inner beauty is as important as outer beauty.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-quality">
+                            <h4>OUR QUALITY</h4>
+                            <p>Our Car Cleaning Experts will give your car the perfect shine it deserves within a few hours. Your car is your pride and we won’t let it down. We strive excellence in what we do to make you feel special and bring that new car feeling again.</p>
+                            <ul>
+                                <li><i class="fa fa-check-circle-o"></i>Now no more spending your precious time, energy and money at service stations.</li>
+                                <li><i class="fa fa-check-circle-o"></i>we save both time and money by giving doorstep delivery to the customer.</li>
+                                <li><i class="fa fa-check-circle-o"></i>We strive excellence in what we do and come fully equipped with all the resources.</li>
+                                <li><i class="fa fa-check-circle-o"></i>Our Trained Professional come with Hands on Experience.</li>
+                                <li><i class="fa fa-check-circle-o"></i>Our High Pressure Steam Cleaning Machine pulls out those deep stains , dust and grime giving your car the perfect shine.</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Aboutus Section End -->
+
+    <!-- Testimonial Section End -->
+    <section class="testimonial-section set-bg spad" data-setbg="{% static 'img/testimonial-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="testimonial-slider owl-carousel">
+                        {% for ratings_object in ratings %}
+                        <div class="ts-item">
+                            <div class="rating">
+                                {% if ratings_object.rating == 5 %}
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star"></i>
+                                {% elif ratings_object.rating == 4 %}
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i> 
+                                {% elif ratings_object.rating == 3 %}
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i> 
+                                {% elif ratings_object.rating == 2 %}
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                {% else %}
+                                    <i class="fa fa-star"></i>
+                                {% endif %}
+                            </div>
+                            <h4>{{ratings_object.review}}</h4>
+                            <div class="author-name">
+                                <h5>{{ratings_object.name}}</h5>
+                                <span>Ekko Wash Customer</span>
+                            </div>
+                            <div class="author-pic">
+                                <img src="{% static 'img/author-pic.png' %}" alt="">
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-logo-item">
+                        <div class="f-logo">
+                            <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
+                        </div>
+                        <p>We are a technologically driven group of individuals trying to go green. You too can join us to participate in the bigger cause.</p>
+                        <div class="social-links">
+                            <h6>Follow us</h6>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-whatsapp"></i>
+                            <!-- <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a> -->
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="footer-widget">
+                       <!--  <h5>Our Blog</h5>
+                        <div class="footer-blog">
+                            <a href="#" class="fb-item">
+                                <h6>Most people who work</h6>
+                                <span class="blog-time"><i class="fa fa-clock-o"></i> Jan 02, 2019</span>
+                            </a>
+                            <a href="#" class="fb-item">
+                                <h6>Freelance Design Tricks How </h6>
+                                <span class="blog-time"><i class="fa fa-clock-o"></i> Jan 02, 2019</span>
+                            </a>
+                            <a href="#" class="fb-item">
+                                <h6>have a computer at home have had </h6>
+                                <span class="blog-time"><i class="fa fa-clock-o"></i> Jan 02, 2019</span>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footer-widget">
+                       <!--  <h5>Program</h5>
+                        <ul class="workout-program">
+                            <li><a href="#">Bodybuilding</a></li>
+                            <li><a href="#">Running</a></li>
+                            <li><a href="#">Streching</a></li>
+                            <li><a href="#">Weight Loss</a></li>
+                            <li><a href="#">Gym Fitness</a></li>
+                        </ul> -->
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-widget">
+                        <h5>Get Info</h5>
+                        <ul class="footer-info">
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <span>Phone:</span>
+                                +91 8960419062
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope-o"></i>
+                                <span>Email:</span>
+                                ekkowash@gmail.com
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <span>Address</span>
+                                Vanasthalipuram, Hyderabad.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="ct-inside"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/mixitup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

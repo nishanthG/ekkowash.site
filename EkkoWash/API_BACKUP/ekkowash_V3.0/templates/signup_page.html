@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta name="description" content="Activitar Template">
+    <meta name="keywords" content="Activitar, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ekko Wash | Car Washing Service</title>
+	<link rel="stylesheet" href="{% static 'css/login_style.css' %}" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--//Style-CSS -->
+</head>
+
+<body>
+	<!-- /login-section -->
+	<section class="w3l-login-6">
+
+		<div class="login-hny">
+			<div class="form-content">
+				<div class="form-right">
+					<div class="overlay">
+						<div class="grid-info-form">
+							<h5>Welcome to ekko wash</h5>
+							<h3>CREATE ACCOUNT</h3>
+							<p>Create Your Account, It's Free.</p>
+							<!-- <a href="index.html" class="read-more-1 btn">Get Started</a> -->
+						</div>
+					
+					</div>
+				</div>
+				<div class="form-left">
+					<!-- <div class="middle">
+						<h4>Sign Up for a good cause.</h4>
+						<p>Create Your Account, It's Free.</p>
+					</div> -->
+					{% csrf_token %}
+					<form action='{% url "register_user" %}' method="post" class="signin-form">
+						{% csrf_token %}
+							<div class="form-input">
+								<label>Name</label>
+								<input type="text" name="username" placeholder="" required />
+							</div>
+							<div class="form-input">
+								<label>Email</label>
+								<input type="email" name="email" placeholder="" required />
+							</div>
+							<div class="form-input">
+								<label>Password</label>
+								<input type="password" name="password" placeholder="" required />
+							</div>
+
+							<div class="form-input">
+								<label>Confirm Password</label>
+								<input type="password" name="conf_password" placeholder="" required />
+							</div>
+							
+							<label class="container">I agree to <a href="#">Conditions</a> of Use and <a href="#">Privacy</a>
+								<input type="checkbox" id='checkbox'>
+								<span class="checkmark"></span>
+							</label>
+							<script type="text/javascript">
+								$(function() {
+								    $('#checkbox').click(function() {
+								        if ($(this).is(':checked')) {
+								        	$('#submit_button').removeAttr('disabled');
+								        } else {
+								            $('#submit_button').attr('disabled', 'disabled');
+								        }
+								    });
+								});
+							</script>
+							<button class="btn" id='submit_button' disabled>Create account</button>
+					</form>
+					<div class="copy-right text-center">
+						<p>© Ekko Wash. All rights reserved | Design by
+								<a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+					 </div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+	<!-- //login-section -->
+</body>
+
+</html>

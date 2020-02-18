@@ -1,0 +1,278 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Activitar Template">
+    <meta name="keywords" content="Activitar, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ekko Wash | Car Washing Service</title>
+
+    <!-- Google Font -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:light' rel='stylesheet' type='text/css'>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section header-normal">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'img/logo.png' %}" alt="">
+                </a>
+            </div>
+            <div class="top-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-whatsapp"></i>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div class="container">
+                <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <ul>
+                            <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                            <!-- <li><a href="./about-us.html">About us</a></li> -->
+                            <!-- <li><a href="./schedule.html">Schedule</a></li> -->
+                            <li><a href="{% url 'about_page' %}">About Us</a></li>
+                            <li><a href="{% url 'gallery_page' %}">Gallery</a></li>
+                            <li><a href="{% url 'offers_page' %}">Why Us?</a>
+                                <ul class="dropdown">
+                                    <li><a href="{% url 'offers_page' %}">Our Offers</a></li>
+                                    <li><a href="{% url 'blog_page' %}"> Why Waterless Car Wash?</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'contact_us_page' %}">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+
+    <!-- booking FORM : BEGIN -->
+    <section class="blog-single-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="leave-comment-form">
+                        <h4>Book your wash</h4>
+                        <form id= "contact-form" method="POST" action="{% url 'book_wash'%}">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <input type="text" placeholder="Name" class="is-valid" name="name" >
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type="email" placeholder="Email" name="email" >
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type="text" placeholder="Phone" name="phone" >
+                                </div>
+                                <div class="col-lg-4">
+                                   <br>
+                                   <br>
+                                  </div>
+                                <div class="col-lg-12">
+                                    <input type="text"placeholder="Street Address" id='addr'  name="addr" >
+                                    <input type="text"placeholder="Nearby Landmark" id='landmark' name="landmark">
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type="text" placeholder="Hyderabad" value="Hyderabad" readonly id="city" name="city">
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type="text" placeholder="Telangana" value="Telangana" readonly id="state" name="state">
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type="text" placeholder="Postal Code" id="pincode" name="pincode" >
+                                </div>
+                                <div class="col-lg-4">
+                                   <br>
+                                   <br>
+                                  </div>
+
+                                <div class="col-lg-12">
+                                </div>
+                                <div class="col-lg-4">
+                                  <input type="text" class="form-control" placeholder="Booking Date" id="date" name="date" > 
+                                  </div>
+                                  <div class="col-lg-4">
+                                  <input type="text" class="form-control" placeholder="Booking Time" id="time"name="time" > 
+                                  </div>
+                                  <div class="col-lg-4">
+                                  <input type="text" class="form-control" placeholder="Alternate Booking Time" name="atime" id="atime" > 
+                                  </div>
+                                  
+                                  
+                                  <div class="col-lg-4">
+                                  <select class="form-control" id="ctype" name="ctype" >
+                                    <option selected>Choose Car Type</option>
+                                    <option>Hatch Back</option>
+                                    <option>Sedan</option>
+                                    <option>SUV</option>
+                                    <option>Luxury</option>
+                                    <option>MiniVan</option>
+                                  </select>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <select class="form-control" id="addon" name="addon">
+                                    <option selected>Add on Services</option>
+                                    <option>Hatch Back</option>
+                                    <option>Sedan</option>
+                                    <option>SUV</option>
+                                    <option>Luxury</option>
+                                    <option>MiniVan</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-4">
+                                  </div>
+                                  <div class="col-lg-12">
+                                   <br>
+                                   <br>
+                                  </div>
+                                  <div class="col-lg-4">
+                                  <input type="text" class="form-control" placeholder="Coupon Code (if any)" name="ccode" id="ccode"> 
+                                  </div>
+
+                                <div class="col-lg-12">
+                                    <textarea placeholder="Special Requests" id="desc" name="desc"></textarea>
+                                </div>
+                            </div>
+                            <button onclick="myFunction()" class="leave-btn">Submit Request</button>
+                            <script>
+                            function myFunction() {
+                              document.getElementById("contact-form").submit();
+                            }
+                            </script>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-logo-item">
+                        <div class="f-logo">
+                            <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
+                        </div>
+                        <p>We are a technologically driven group of individuals trying to go green. You too can join us to participate in the bigger cause.</p>
+                        <div class="social-links">
+                            <h6>Follow us</h6>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-whatsapp"></i>
+                            <!-- <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a> -->
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="footer-widget">
+                       <!--  <h5>Our Blog</h5>
+                        <div class="footer-blog">
+                            <a href="#" class="fb-item">
+                                <h6>Most people who work</h6>
+                                <span class="blog-time"><i class="fa fa-clock-o"></i> Jan 02, 2019</span>
+                            </a>
+                            <a href="#" class="fb-item">
+                                <h6>Freelance Design Tricks How </h6>
+                                <span class="blog-time"><i class="fa fa-clock-o"></i> Jan 02, 2019</span>
+                            </a>
+                            <a href="#" class="fb-item">
+                                <h6>have a computer at home have had </h6>
+                                <span class="blog-time"><i class="fa fa-clock-o"></i> Jan 02, 2019</span>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footer-widget">
+                       <!--  <h5>Program</h5>
+                        <ul class="workout-program">
+                            <li><a href="#">Bodybuilding</a></li>
+                            <li><a href="#">Running</a></li>
+                            <li><a href="#">Streching</a></li>
+                            <li><a href="#">Weight Loss</a></li>
+                            <li><a href="#">Gym Fitness</a></li>
+                        </ul> -->
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-widget">
+                        <h5>Get Info</h5>
+                        <ul class="footer-info">
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <span>Phone:</span>
+                                +91 8960419062
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope-o"></i>
+                                <span>Email:</span>
+                                support.ekko_wash@gmail.com
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <span>Address</span>
+                                Vanasthalipuram, Hyderabad.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="ct-inside"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <!-- <script src="js/jquery-3.3.1.min.js"></script>  -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/mixitup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/form.js' %}"></script>
+</body>
+
+</html>
